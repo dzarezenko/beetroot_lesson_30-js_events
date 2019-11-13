@@ -1,9 +1,16 @@
 let anchor = document.getElementById("anchor");
 
 //anchor.addEventListener('click', showGreating);
-anchor.addEventListener('click', (event) => {
+document.body.addEventListener('click', (event) => {
   console.log(event);
-  event.preventDefault();
+  switch (event.target.id) {
+    case ("anchor"):
+      alert("Link!");
+      event.preventDefault();
+      break;
+    /*default:
+      alert("Not a link!");*/
+  }
 });
 /*anchor.addEventListener('mouseout', () => {
   //alert("Mouse Over!!!");
